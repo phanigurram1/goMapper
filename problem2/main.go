@@ -10,8 +10,8 @@ type skipString struct {
 	str string
 }
 
-func NewSkipString(pos int, str string) skipString {
-	return skipString{
+func NewSkipString(pos int, str string) *skipString {
+	return &skipString{
 		pos: pos,
 		str: str,
 	}
@@ -24,12 +24,6 @@ type Interface interface {
 
 func (s *skipString) GetValueAsRuneSlice() []rune {
 	return []rune(s.str)
-}
-
-func MapString(i Interface) {
-	for pos := range i.GetValueAsRuneSlice() {
-		i.TransformRune(pos)
-	}
 }
 
 var arr []rune
@@ -79,8 +73,20 @@ func getEveryThirdElementPositionMap(s *skipString, arr []rune) map[int]rune {
 	return m
 }
 
+// implement stringer interface
+func (s *skipString) String() string {
+	return fmt.Sprintf("capitalized string is: %s", s.str)
+}
+
+func MapString(i Interface) {
+	for pos := range i.GetValueAsRuneSlice() {
+		i.TransformRune(pos)
+	}
+}
+
 func main() {
 	s := NewSkipString(3, "Aspiration.com")
-	MapString(&s)
-	fmt.Println(string(arr))
+	MapString(s)
+	s.str = string(arr)
+	fmt.Println(s.String())
 }
