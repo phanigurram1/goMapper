@@ -1,9 +1,10 @@
-package main
+package gomapper
 
 import (
-	"fmt"
 	"unicode"
 )
+
+// problem - 1
 
 // This function is to capitalize every third alphanumeric character.
 func CapitalizeEveryThirdAlphanumericChar(s string) string {
@@ -39,8 +40,4 @@ func CapitalizeEveryThirdAlphanumericChar(s string) string {
 		j++
 	}
 	return string(arr)
-}
-
-func main() {
-	fmt.Println(CapitalizeEveryThirdAlphanumericChar("Aspiration.com"))
 }
