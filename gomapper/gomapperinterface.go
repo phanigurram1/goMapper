@@ -37,8 +37,10 @@ func (s *skipString) GetValueAsRuneSlice() []rune {
 // and condition that the rune is a alphanumeric.
 func (s *skipString) TransformRune(pos int) {
 	// If the position is found in mapper then replace arr[pos] with upper case rune value
-	if upper_case_val, ok := s.mapper[pos]; ok {
-		s.arr[pos] = upper_case_val
+	if capitalizedVal, ok := s.mapper[pos]; ok {
+		s.arr[pos] = capitalizedVal
+	} else {
+		s.arr[pos] = unicode.ToLower(s.arr[pos])
 	}
 }
 

@@ -27,7 +27,7 @@ func Test_skipString_GetValueAsRuneSlice(t *testing.T) {
 	}
 }
 
-func Test_getEveryThirdElementPositionMap(t *testing.T) {
+func Test_getPositionMapper(t *testing.T) {
 	type args struct {
 		pos int
 		arr []rune
@@ -41,15 +41,15 @@ func Test_getEveryThirdElementPositionMap(t *testing.T) {
 			"success",
 			args{
 				3,
-				[]rune(ss.str),
+				ss.arr,
 			},
 			map[int]rune{2: rune('P'), 5: rune('A'), 8: rune('O'), 12: rune('O')},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := getEveryThirdElementPositionMap(tt.args.pos, tt.args.arr); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("getEveryThirdElementPositionMap() = %v, want %v", got, tt.want)
+			if got := getPositionMapper(tt.args.pos, tt.args.arr); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("getPositionMapper() = %v, want %v", got, tt.want)
 			}
 		})
 	}

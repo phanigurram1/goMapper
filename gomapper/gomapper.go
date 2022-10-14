@@ -1,7 +1,6 @@
 package gomapper
 
 import (
-	"fmt"
 	"unicode"
 )
 
@@ -11,8 +10,6 @@ import (
 func CapitalizeEveryThirdAlphanumericChar(s string) string {
 	// type casting a string into slice of rune
 	arr := []rune(s)
-	fmt.Println(arr)
-
 	// check if length of the string is greater than 3
 	if len(arr) < 2 {
 		return s
