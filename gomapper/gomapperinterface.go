@@ -8,9 +8,8 @@ import (
 // problem - 2
 
 type skipString struct {
-	pos int    // position of the value to be capitalized
-	arr []rune // Holds rune values for all letters of the string,
-	// as we Transform these values will be updated
+	pos    int          // position of the value to be capitalized
+	arr    []rune       // Holds rune values for all letters of the string,as we Transform these values will be updated
 	mapper map[int]rune // holds the positions to capitalize
 }
 
@@ -67,7 +66,7 @@ func getPositionMapper(pos int, arr []rune) map[int]rune {
 	return m
 }
 
-// Implement stringer interface
+// Implement stringer interface.
 func (s *skipString) String() string {
 	return fmt.Sprintf("capitalized string is: %s", string(s.arr))
 }
