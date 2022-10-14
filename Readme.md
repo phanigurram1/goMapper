@@ -12,7 +12,7 @@ gomapper - This package provides function that capitalizes *only* every third al
 | gomapperinterface.go | This file contains interface implementation for problem 2|
 | gomapperinterface_test.go | This file contains test cases for interface implementation for problem 2|
 
-- This module also contains a **main.go** file which can be run using the command ** go run main.go**
+- This module also contains a **main.go** file which can be run using the command **go run main.go**
 - Run test cases by navigating to gomapper directory using **go test -v**
 ## TestCases Output
 ```
