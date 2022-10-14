@@ -1,6 +1,7 @@
 package gomapper
 
 import (
+	"fmt"
 	"unicode"
 )
 
@@ -10,6 +11,7 @@ import (
 func CapitalizeEveryThirdAlphanumericChar(s string) string {
 	// type casting a string into slice of rune
 	arr := []rune(s)
+	fmt.Println(arr)
 
 	// check if length of the string is greater than 3
 	if len(arr) < 2 {
@@ -31,7 +33,7 @@ func CapitalizeEveryThirdAlphanumericChar(s string) string {
 
 		// this is configurable but fixed as only third letter should be capitalized.
 		if j == 2 {
-			// transform rune to upper case
+			// transform rune to upper caßse
 			arr[i] = unicode.ToUpper(arr[i])
 			j = 0
 			continue
