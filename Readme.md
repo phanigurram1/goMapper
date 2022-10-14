@@ -4,7 +4,6 @@ Solution for the Go mapper problem
 ## gomapper
 gomapper - This package provides function that capitalizes *only* every third alphanumeric character of a string.
 
-<<<<<<< HEAD
 | File | Functionality |
 | ------------- | ------------- |
 | main.go | Starting point of this project |
@@ -43,8 +42,22 @@ Space Complexity: O(N), N = length of the given string
 
 ## Output of main.go
 
-| input position to be capitalized| input string | output |
-| ------------- | ------------- | ------------|
-=======
-- This module also contains a **main.go** file which can be run using the command **go run main.go**
->>>>>>> e850dd2849a9ef9581031b73eb2166e05fa9079d
+```
+enter string to be capitalized
+Aspiration.com
+enter position of the letter to be capitalized
+3
+capitalized string is: asPirAtiOn.cOm
+
+enter string to be capitalized
+Aspiration.coM 
+enter position of the letter to be capitalized
+2
+capitalized string is: aSpIrAtIoN.cOm
+
+enter string to be capitalized
+Aspiration.com
+enter position of the letter to be capitalized
+4
+capitalized string is: aspIratIon.cOm
+```
